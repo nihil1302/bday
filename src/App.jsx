@@ -5,25 +5,16 @@ import { ScrapbookStage } from './components/ScrapbookStage';
 import { HeartfeltLetterStage } from './components/HeartfeltLetterStage';
 import { InteractiveSurpriseStage } from './components/InteractiveSurpriseStage';
 import { CelebrationStage } from './components/CelebrationStage';
-import { StageProgressBar } from './components/StageProgressBar';
 import { BackgroundMusic } from './components/BackgroundMusic';
-import { Heart, Sparkles, ArrowLeft, BookOpen, Clock } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export default function App() {
   const [currentStage, setCurrentStage] = useState(1);
 
   return (
     <div className="min-h-screen flex flex-col justify-between relative selection:bg-rose-200">
-      {/* Background Ambient Melody Toggle */}
+      {/* Background Ambient Melody */}
       <BackgroundMusic />
-
-      {/* Top Navigation & Stage Progress Indicator */}
-      <header className="sticky top-0 z-40 pt-3 pb-2 backdrop-blur-md bg-[#FAF7EE]/80 border-b border-stone-200/50">
-        <StageProgressBar 
-          currentStage={currentStage} 
-          onSelectStage={(stageId) => setCurrentStage(stageId)} 
-        />
-      </header>
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col justify-center">
