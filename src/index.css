@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7EE;
+    color: #3D352E;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-image: 
+      radial-gradient(#E8DFD1 0.75px, transparent 0.75px),
+      radial-gradient(#E8DFD1 0.75px, #FAF7EE 0.75px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+  }
+}
+
+/* Scrapbook and handmade aesthetic typography */
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Washi Tape styling */
+.washi-tape {
+  position: relative;
+  background: rgba(255, 182, 193, 0.45);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  backdrop-filter: blur(1px);
+}
+.washi-tape-yellow {
+  background: rgba(254, 240, 138, 0.6);
+}
+.washi-tape-teal {
+  background: rgba(167, 243, 208, 0.5);
+}
+.washi-tape-lavender {
+  background: rgba(221, 214, 254, 0.55);
+}
+
+/* 3D Envelope styling */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.flap-origin-top {
+  transform-origin: top center;
+}
+
+/* Floating animation variations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatGentleReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-3deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatGentleReverse 5.2s ease-in-out 1s infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+/* Petal Drift Keyframes */
+@keyframes petalDrift {
+  0% {
+    transform: translateY(-10px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(120px) translateX(25px) rotate(50deg);
+    opacity: 0;
+  }
+}
+
+.animate-petal-drift {
+  animation: petalDrift 7s ease-in-out infinite;
+}
+
+/* Fade In animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInSlide 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Candle flame flicker animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.9));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.75));
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 9px rgba(245, 158, 11, 0.85));
+  }
+}
+
+/* Smoke puff after candles are blown out */
+@keyframes smokePuff {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(-14px) scale(1.1) translateX(3px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-26px) scale(1.4) translateX(-4px);
+    opacity: 0;
+  }
+}
+
+.animate-flicker {
+  animation: flameFlicker 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-smoke {
+  animation: smokePuff 1.8s ease-out forwards;
+}
+
+/* Support for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEBC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BFB29C;
+}

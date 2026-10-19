@@ -1,0 +1,33 @@
+{
+  "passed": [
+    "Step 1: Document title matches Elizaaa",
+    "Step 1: Recipient name Elizaaa displayed on Opening Screen",
+    "Step 2: Transitioned smoothly to Stage 2: Friendship Scrapbook",
+    "Step 3: All 8 scrapbook photos loaded with authentic natural dimensions",
+    "Step 4: Lightbox opened with counter 1 of 8",
+    "Step 4: Lightbox Next button advanced to 2 of 8",
+    "Step 4: Keyboard ArrowLeft navigated back to 1 of 8",
+    "Step 4: Lightbox closed successfully on Escape key",
+    "Step 5: Successfully navigated to Stage 3: Heartfelt Letter",
+    "Step 6: Letter correctly addresses Elizaaa (elii)",
+    "Step 6: Typewriter instant reveal / replay control verified",
+    "Step 7: All 3 clickable secret notes opened and closed without error",
+    "Step 8: Successfully navigated to Stage 4: Make a Wish",
+    "Step 9: Wish message revealed accurately after blowing out candles",
+    "Step 9: Relight candles button reset flame state properly",
+    "Step 10: Mini gift box unboxed successfully and revealed personal bestie voucher",
+    "Step 11: Successfully navigated to Stage 5: Grand Finale",
+    "Step 12: Favourite photo loaded with authentic natural dimensions",
+    "Step 12: \"One last hug?\" interaction opened warm bear hug modal without breaking routes",
+    "Step 12: Replay experience reset cleanly back to Stage 1",
+    "Step 13: \"Back to Envelope\" successfully returned to Stage 1",
+    "Step 14: Responsive layout passes on Mobile (iPhone 13) with zero horizontal overflow",
+    "Step 14: Responsive layout passes on Tablet (iPad Mini) with zero horizontal overflow",
+    "Step 14: Responsive layout passes on Desktop (Full HD) with zero horizontal overflow",
+    "Step 15: Page refresh preserved clean state without blank screen or errors",
+    "Step 16: Reduced-motion preference fast-tracked transition cleanly"
+  ],
+  "failed": [],
+  "consoleErrors": [],
+  "networkFailures": []
+}
